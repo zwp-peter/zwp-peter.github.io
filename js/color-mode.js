@@ -1,24 +1,34 @@
 !function (window, document) {
   var rootElement = document.documentElement;
   var toggleElement = document.getElementById('color-toggle');
-  var localStorageKey = 'color-mode';
+  var storageKey = 'color-mode';
+  var mediaQueryStorageKey = 'color-mode-media-query'
   var htmlAttribute = 'color-mode'
   var toggleAttribute = 'color-toggle'
 
-  var getModeFromCSSMediaQuery = function () {
+  var getModeFromMediaQuery = function () {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   var getModeFromLocalStorage = function () {
-    return localStorage.getItem(localStorageKey);
+    return localStorage.getItem(storageKey);
+  }
+
+  var getMediaQueryStorage = function () {
+    return localStorage.getItem(mediaQueryStorageKey);
+  }
+
+  var setMediaQueryStorage = function (mode) {
+    localStorage.setItem(mediaQueryKey, mode);
   }
 
   var setColorMode = function (mode) {
     rootElement.setAttribute(htmlAttribute, mode);
-    localStorage.setItem(localStorageKey, mode);
+    localStorage.setItem(storageKey, mode);
   }
 
   var setIcon = function (mode) {
+    if (!toggleElement) return;
     var addIconName = mode === 'light' ? 'iconmoono' : 'iconsuno';
     var removeIconName = mode === 'light' ? 'iconsuno' : 'iconmoono';
     toggleElement.classList.remove(removeIconName);
@@ -27,12 +37,13 @@
   }
 
   var loadColorMode = function (mode) {
-    var mode = mode || getModeFromLocalStorage() || getModeFromCSSMediaQuery();
+    var mode = mode || getModeFromLocalStorage() || getModeFromMediaQuery();
     setColorMode(mode);
     setIcon(mode);
   }
 
   var switchColorMode = function () {
+    if (!toggleElement) return;
     toggleElement.addEventListener('click', function () {
       var mode = this.getAttribute(toggleAttribute) === 'light' ? 'dark' : 'light';
       setColorMode(mode);
