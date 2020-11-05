@@ -169,7 +169,7 @@
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>十月 26, 2020</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1328</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1694</span>
     </div>
   </div>
 </section>
@@ -186,7 +186,24 @@
 <h4 id="解压过程："><a href="#解压过程：" class="headerlink" title="解压过程："></a>解压过程：</h4><p>把数据从Huffman编码还原到原来的字符编码，也要以位为单位，一位一位地进行。最先从根开始，根据面临的数据位是０还是１决定走左子树或右子树，走到叶结点就得到一个对应于该叶结点的字符；接着回到根结点，重复以上过程，叶到还原出所有的字符。</p>
 <p>因为最后一字节的有效位可能只占一部分，所以，解码的终止条件应该是”得到所有的字符”而不是把所有的位走完；否则，到达最后一字节的最后一位时，可能走不到叶结点，也可能已经产生了多余的字符。</p>
 <h4 id="测试执行时间的函数："><a href="#测试执行时间的函数：" class="headerlink" title="测试执行时间的函数："></a>测试执行时间的函数：</h4><p>#include &lt;mmsystem.h&gt;<br>#include &lt;stdlib.h&gt;<br>DWORD BegTime=timeGetTime();<br>….<br>EndTime=timeGetTime()-BegTime;</p>
-<h3 id="二、软件设计"><a href="#二、软件设计" class="headerlink" title="二、软件设计"></a>二、软件设计</h3>
+<h3 id="二、软件设计"><a href="#二、软件设计" class="headerlink" title="二、软件设计"></a>二、软件设计</h3> <script type="text/javascript" charset="utf-8"  src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.0.min.js"></script>
+ <script type="text/javascript" charset="utf-8"  src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.min.js"></script>
+
+ <script>
+        $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+        //2d模型
+        L2Dwidget.init({"display": {
+                "superSample": 2,
+                "width": 200,
+                "height": 400,
+                "position": "right",
+                "hOffset": 0,
+                "vOffset": 0
+            }
+        });
+     </script>
+
+
       </section>
       <section class="extra">
         
@@ -306,7 +323,7 @@
 <script src="/js/color-mode.js"></script>
 
   
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
