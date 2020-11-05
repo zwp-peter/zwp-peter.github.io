@@ -7,14 +7,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>归档 - 小小鹏的博客: 2020</title>
+  <title>Packaging Qt Project - 小小鹏的博客</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
 
   
   
-  <meta name="description" content="我心无欲，锐不可当。"> 
+  <meta name="description" content="怎样打包一个Qt项目呢？第一种方法：QT5自带的win..."> 
   
   <meta name="author" content="赵文鹏"> 
 
@@ -107,7 +107,7 @@
 
 <nav class="navbar">
   <div class="left"></div>
-  <div class="center">归档</div>
+  <div class="center">Packaging Qt Project</div>
   <div class="right">
     
       <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
@@ -158,41 +158,84 @@
   </div>
 </nav>
   <main id="main">
-  <section class="archive">
-    <div class="archive-container">
-      <div class="archive-post">
-        <h3 class="archive-total">归档: 4 篇</h3>
-        
-        
-        
-        <h3 class="archive-year">2020 年</h3>
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/11/05/Packaging-Qt-Project/">十一月 05</a>
-          <a class="archive-title" href="/2020/11/05/Packaging-Qt-Project/">Packaging Qt Project</a>
-        </div>
-        
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/11/04/post/">十一月 04</a>
-          <a class="archive-title" href="/2020/11/04/post/">tree</a>
-        </div>
-        
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/10/26/My-New-Post/">十月 26</a>
-          <a class="archive-title" href="/2020/10/26/My-New-Post/">Huffman Compress</a>
-        </div>
-        
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/10/20/hello-world/">十月 20</a>
-          <a class="archive-title" href="/2020/10/20/hello-world/">Welcome!</a>
-        </div>
-        
-      </div>
+  <div class="container" id="container">
+    <article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Packaging Qt Project</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 05, 2020</span
+        class="post-info-item">
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>225</span>
     </div>
-  </section>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h4 id="怎样打包一个Qt项目呢？"><a href="#怎样打包一个Qt项目呢？" class="headerlink" title="怎样打包一个Qt项目呢？"></a>怎样打包一个Qt项目呢？</h4><h5 id="第一种方法："><a href="#第一种方法：" class="headerlink" title="第一种方法："></a>第一种方法：</h5><p>QT5自带的windeployqt</p>
+<p>首先要生成一下release版本。</p>
+<p><img   class="lazyload" data-original="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105154038843.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20201105154038843"></p>
+<p>这时就会找到相关文件夹。</p>
+<p><img   class="lazyload" data-original="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105154357821.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20201105154357821"></p>
+<p>打开这个文件夹，这时候点击exe文件是不能运行的（缺少运行所依赖的环境），将这个可执行文件复制出来，新建一个文件夹，粘贴进去。</p>
+<p>然后打开Qt的命令行，方法是在win菜单栏Qt下找到</p>
+<p><img   class="lazyload" data-original="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105155005020.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20201105155005020"></p>
+<p>点击运行。进入到含有EXE文件的路径。</p>
+<p><img   class="lazyload" data-original="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105155730394.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20201105155730394"></p>
+<p>接下来输入windeployqt 程序名 敲击回车</p>
+<p>然后就配置好啦！</p>
+<p>持续更新。。。</p>
+
+      </section>
+      <section class="extra">
+        
+        <ul class="copyright">
+  
+  <li><strong>本文作者：</strong>赵文鹏</li>
+  <li><strong>本文链接：</strong><a href="http://example.com/2020/11/05/Packaging-Qt-Project/index.html">http://example.com/2020/11/05/Packaging-Qt-Project/index.html</a></li>
+  <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+      rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        <section class="donate">
+  <div class="qrcode">
+    <img   class="lazyload" data-original="https://i.loli.net/2020/10/30/JOHkCsxcdtAMXeY.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Qt/" rel="tag">Qt</a></li></ul>
+
+        
+<nav class="nav">
+  
+  
+    <a href="/2020/11/04/post/">tree<i class="iconfont iconright"></i></a>
+  
+</nav>
+
+      </section>
+      
+      <section class="comments">
+  
+  <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+</section>
+      
+    </section>
+  </div>
+</article>
+  </div>
 </main>
   <footer class="footer">
   <div class="footer-social">
