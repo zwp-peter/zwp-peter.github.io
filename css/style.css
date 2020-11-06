@@ -57,7 +57,7 @@ body a {
   text-decoration: none;
 }
 body a:hover {
-  color: #ff3b00;
+  color: #ffbe5b;
 }
 body a,
 body a:hover {
@@ -123,15 +123,15 @@ body ul {
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
 *::selection {
-  background: #ff3b00;
+  background: #ffbe5b;
   color: #fff;
 }
 *::-moz-selection {
-  background: #ff3b00;
+  background: #ffbe5b;
   color: #fff;
 }
 *::-webkit-selection {
-  background: #ff3b00;
+  background: #ffbe5b;
   color: #fff;
 }
 .container {
@@ -720,7 +720,7 @@ body ul {
   font-size: 1.5em;
 }
 .fab:hover {
-  background-color: #ff3b00;
+  background-color: #ffbe5b;
   cursor: pointer;
 }
 .fab-hide {
@@ -931,7 +931,7 @@ body ul {
   z-index: 40;
   height: 90vh;
   width: 100%;
-  background-image: url("");
+  background-image: url("/images/theme/welcome-image.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -947,7 +947,7 @@ body ul {
   padding: 1em;
   font-family: 'Quicksand', 'Vollkorn', serif;
   font-weight: 300;
-  color: #fff;
+  color: #000;
   margin: 0;
 }
 @media (max-width: 768px) {
@@ -1283,7 +1283,7 @@ body ul {
   background-color: var(--color-background-secondary);
   padding: 2px 5px;
   border-radius: 2px;
-  color: #ff3b00;
+  color: #ffbe5b;
 }
 .article .wrap .main .content a {
   text-decoration: underline;
@@ -1340,7 +1340,7 @@ body ul {
   margin: 0 0 1em;
   padding: 15px 20px;
   background-color: var(--color-background-secondary);
-  border-left: 4px solid #ff3b00;
+  border-left: 4px solid #ffbe5b;
 }
 .article .wrap .main .content blockquote p {
   margin: 0;
@@ -1349,7 +1349,7 @@ body ul {
   margin-top: 50px;
 }
 .article .wrap .main .extra .copyright {
-  border-left: 4px solid #ff3b00;
+  border-left: 4px solid #ffbe5b;
   background-color: var(--color-background-secondary);
   list-style: none;
   padding: 15px 20px;
@@ -1434,7 +1434,7 @@ body ul {
 }
 .article .wrap .main .extra .tag-list .tag-list-item:hover {
   cursor: pointer;
-  background-color: #ff3b00;
+  background-color: #ffbe5b;
 }
 .article .wrap .main .extra .tag-list .tag-list-item:hover a {
   color: #fff;
@@ -1457,7 +1457,7 @@ body ul {
   text-align: center;
 }
 .article .wrap .main .comments .btn:hover {
-  background-color: #ff3b00;
+  background-color: #ffbe5b;
   color: #fff;
   transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
   cursor: pointer;
@@ -1586,7 +1586,7 @@ body ul {
   margin-right: 10px;
 }
 .tags a:hover {
-  background-color: #ff3b00;
+  background-color: #ffbe5b;
   color: #fff !important;
 }
 .galleries {
