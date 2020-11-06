@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode=light>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Huffman Compress - 小小鹏的博客</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+
+  
+  
+  <meta name="description" content="一、题目要求首先对一个现有文件进行编码形成新的文件，也..."> 
+  
+  <meta name="author" content="赵文鹏"> 
+
+  
+    <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  
+  
+    <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  
+  
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  
+  
+    <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_s6x2xcokxrl.css">
+
+  
+
+  
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/.css">
+
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        onlyPost: '',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://i.loli.net/2020/10/30/JOHkCsxcdtAMXeY.jpg',
+        wechat: 'https://i.loli.net/2020/10/30/7gLJ3KcGFYwn1Bx.jpg'
+      },
+      motto: {
+        api: 'https://v1.hitokoto.cn/?encode=text&amp;c=d',
+        default: '我在开了灯的床头下，想问问自己的心啊。'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        alwaysShow: 
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      }
+    }
+  </script>
+
+  
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+<nav class="navbar">
+  <div class="left"></div>
+  <div class="center">Huffman Compress</div>
+  <div class="right">
+    
+      <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+    
+    <i class="iconfont iconmenu j-navbar-menu"></i>
+  </div>
+</nav>
+
+  <nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content">
+      
+      
+      
+      
+      <li class="menu-item"><a href="/ " class="underline"> 首页</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/galleries " class="underline"> 摄影</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/archives " class="underline"> 归档</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/tags " class="underline"> 标签</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/categories " class="underline"> 分类</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/about " class="underline"> 关于</a></li>
+      
+    </ul>
+    <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  </div>
+</nav>
+  <main id="main">
+  <div class="container" id="container">
+    <article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Huffman Compress</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>十月 26, 2020</span
+        class="post-info-item">
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>1694</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h3 id="一、题目要求"><a href="#一、题目要求" class="headerlink" title="一、题目要求"></a>一、题目要求</h3><p>首先对一个现有文件进行编码形成新的文件，也就是压缩。在文件使用时，再对压缩文件进行解码，也就是解压，复原原有文件。</p>
+<h4 id="基本要求："><a href="#基本要求：" class="headerlink" title="基本要求："></a>基本要求：</h4><p>1、压缩准备：读取指定被压缩文件，对文件进行分析，建立哈夫曼树。<br>2、压缩：利用已建好的哈夫曼树，对文件进行编码，并将哈夫曼编码及文件编码后的数据一起写入文件中，形成压缩文件(.Haf)。<br>3、解压：打开已有压缩文件(.Haf)，读取其中的哈夫曼编码，构建哈夫曼树，读取其中的数据，进行译码后，写入文件，完成解压缩。 </p>
+<h4 id="提高要求："><a href="#提高要求：" class="headerlink" title="提高要求："></a>提高要求：</h4><p>1、基于Windows对话框界面，可选择输入/输出文件名，有压缩进度条显示。<br>2、解压不必指定文件后缀，自动生成原始文件。<br>3、同类型的文件测试不同的数据集，比较其压缩比，采用最有效的压缩方式。<br>4、支持任意类型文件的压缩。</p>
+<h4 id="测试数据："><a href="#测试数据：" class="headerlink" title="测试数据："></a>测试数据：</h4><p>约40000字符左右。<br>示例数据.txt， 80K，采用WinRar压缩后为43K；本算法压缩后约为61K；<br>示例数据.doc，144K，采用WinRar压缩后为52K。</p>
+<h4 id="实现提示："><a href="#实现提示：" class="headerlink" title="实现提示："></a>实现提示：</h4><p>1、针对ASCII字符集[0,255]的频率统计<br>2、数据类型采用BYTE或unsigned char<br>3、文件一般读取两次：统计与编码<br>4、分块读取文件，建议为1K的整数倍<br>5、为了获得较好的压缩效率，频率的确定要以大量的统计数字为依据，或者压缩时再动态地统计各字符出现的频率<br>6、静态Huffman压缩，动态Huffman压缩 </p>
+<h4 id="压缩存储的实现"><a href="#压缩存储的实现" class="headerlink" title="压缩存储的实现"></a>压缩存储的实现</h4><p>从字符序列中逐个取出字符，转换为Huffman编码，以位为单位依次存储。<br>例如：a:0, b:10, c:110; d:1110; e:1111<br>ａｂａａｃａａｄａａａｅａａｂ<br>0100011000111000011110010<br>需要四个字节的空间，<br>使用unsigned short存储: 0xFFFF，16位<br>使用unsigned int存储: 0xFFFFFFFF，32位<br>使用位操作、移位操作  </p>
+<p>//一位操作，效率低下，应当使用多位操作，下列代码禁用</p>
+<p>Int Insertbit (int bit)<br>{<br>   hufcoded&lt;&lt;=1；<br>   if (bit) hufcoded |=1;<br>   if (++bitcounter==8)<br>   {<br>       bitcounter=0;<br>       fputc(hufcoded, file);<br>   }<br>}</p>
+<h4 id="解压过程："><a href="#解压过程：" class="headerlink" title="解压过程："></a>解压过程：</h4><p>把数据从Huffman编码还原到原来的字符编码，也要以位为单位，一位一位地进行。最先从根开始，根据面临的数据位是０还是１决定走左子树或右子树，走到叶结点就得到一个对应于该叶结点的字符；接着回到根结点，重复以上过程，叶到还原出所有的字符。</p>
+<p>因为最后一字节的有效位可能只占一部分，所以，解码的终止条件应该是”得到所有的字符”而不是把所有的位走完；否则，到达最后一字节的最后一位时，可能走不到叶结点，也可能已经产生了多余的字符。</p>
+<h4 id="测试执行时间的函数："><a href="#测试执行时间的函数：" class="headerlink" title="测试执行时间的函数："></a>测试执行时间的函数：</h4><p>#include &lt;mmsystem.h&gt;<br>#include &lt;stdlib.h&gt;<br>DWORD BegTime=timeGetTime();<br>….<br>EndTime=timeGetTime()-BegTime;</p>
+<h3 id="二、软件设计"><a href="#二、软件设计" class="headerlink" title="二、软件设计"></a>二、软件设计</h3> <script type="text/javascript" charset="utf-8"  src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.0.min.js"></script>
+ <script type="text/javascript" charset="utf-8"  src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.min.js"></script>
+
+ <script>
+        $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+        //2d模型
+        L2Dwidget.init({"display": {
+                "superSample": 2,
+                "width": 200,
+                "height": 400,
+                "position": "right",
+                "hOffset": 0,
+                "vOffset": 0
+            }
+        });
+     </script>
+
+
+      </section>
+      <section class="extra">
+        
+        <ul class="copyright">
+  
+  <li><strong>本文作者：</strong>赵文鹏</li>
+  <li><strong>本文链接：</strong><a href="http://example.com/2020/10/26/My-New-Post/index.html">http://example.com/2020/10/26/My-New-Post/index.html</a></li>
+  <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+      rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        <section class="donate">
+  <div class="qrcode">
+    <img   class="lazyload" data-original="https://i.loli.net/2020/10/30/JOHkCsxcdtAMXeY.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-structure/" rel="tag">data structure</a></li></ul>
+
+        
+<nav class="nav">
+  
+    <a href="/2020/11/04/post/"><i class="iconfont iconleft"></i>tree</a>
+  
+  
+    <a href="/2020/10/20/hello-world/">Welcome!<i class="iconfont iconright"></i></a>
+  
+</nav>
+
+      </section>
+      
+      <section class="comments">
+  
+  <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+</section>
+      
+    </section>
+  </div>
+</article>
+  </div>
+</main>
+  <footer class="footer">
+  <div class="footer-social">
+    
+    
+    
+    
+    
+    <a href="tencent://message/?Menu=yes&uin=1834586762 " target="_blank" onMouseOver="this.style.color= '#12B7F5'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconQQ "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="javascript:; " target="_blank" onMouseOver="this.style.color= '#09BB07'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconwechat-fill "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="https://www.instagram.com/izhaoo/ " target="_blank" onMouseOver="this.style.color= '#DA2E76'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconinstagram "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="https://github.com/zwp-peter " target="_blank" onMouseOver="this.style.color= '#24292E'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  icongithub-fill "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="mailto:1834586762@qq.com " target="_blank" onMouseOver="this.style.color='#FF3B00'"
+      onMouseOut="this.style.color=''">
+      <i class="iconfont footer-social-item  iconmail"></i>
+    </a>
+    
+  </div>
+  <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+</footer>
+<script type="text/javascript" src="/clicklove.js"></script>
+
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  <div class="fab fab-daovoice">
+    <i class="iconfont iconcomment"></i>
+  </div>
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/modules.js"></script>
+<script src="/js/zui.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+    "//widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: ""
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+<script>
+  (function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4c204d8bc027a0455b5fc642ac334ca8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>
