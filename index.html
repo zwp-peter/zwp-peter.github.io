@@ -1,477 +1,745 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" color-mode=light>
-
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>小小鹏的博客</title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="google" content="notranslate" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-  
-  <meta name="description" content="我心无欲，锐不可当。"> 
-  
-  <meta name="author" content="赵文鹏"> 
-
-  
-    <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
-  
-  
-    <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
-  
-  
-    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
-  
-  
-    <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
-  
-  
-    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
-    <meta rel="msapplication-TileColor" content="#000000">
-  
-
-  
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-  
-  
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_onl0g0h21np.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  
-
-  
-  
-  
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-
-  
-
-  
-  
-  
-<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css">
-
-  
-
-  <script>
-    var CONFIG = window.CONFIG || {};
-    var ZHAOO = window.ZHAOO || {};
-    CONFIG = {
-      isHome: true,
-      fancybox: true,
-      pjax: false,
-      lazyload: {
-        enable: true,
-        onlyPost: 'false',
-        loading: '/images/theme/loading.gif'
-      },
-      donate: {
-        enable: true,
-        alipay: 'https://i.loli.net/2020/10/30/JOHkCsxcdtAMXeY.jpg',
-        wechat: 'https://i.loli.net/2020/10/30/7gLJ3KcGFYwn1Bx.jpg'
-      },
-      motto: {
-        api: '',
-        default: '我心无欲，锐不可当。'
-      },
-      galleries: {
-        enable: true
-      },
-      fab: {
-        enable: true,
-        alwaysShow: false
-      },
-      carrier: {
-        enable: true
-      },
-      daovoice: {
-        enable: true
-      }
-    }
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
+  <meta name="description" content="我心无欲，锐不可当。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小小鹏的博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="小小鹏的博客">
+<meta property="og:description" content="我心无欲，锐不可当。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="赵文鹏">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>小小鹏的博客</title>
   
 
-  
-<meta name="generator" content="Hexo 5.2.0"></head>
-<body class="lock-screen">
-  <div class="loading"></div>
-  
 
 
-  <nav class="menu">
-  <div class="menu-wrap">
-    <div class="menu-close">
-      <i class="iconfont iconbaseline-close-px"></i>
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    <ul class="menu-content">
-      
-      
-      
-      
-      <li class="menu-item"><a href="/ " class="underline"> 首页</a></li>
-      
-      
-      
-      
-      <li class="menu-item"><a href="/galleries " class="underline"> 摄影</a></li>
-      
-      
-      
-      
-      <li class="menu-item"><a href="/archives " class="underline"> 归档</a></li>
-      
-      
-      
-      
-      <li class="menu-item"><a href="/tags " class="underline"> 标签</a></li>
-      
-      
-      
-      
-      <li class="menu-item"><a href="/categories " class="underline"> 分类</a></li>
-      
-      
-      
-      
-      <li class="menu-item"><a href="/about " class="underline"> 关于</a></li>
-      
-    </ul>
-    <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
   </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">小小鹏的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">中国地质大学（武汉）    软件工程本科在读学生</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
 </nav>
-  <main id="main">
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
   
-    <div class="preview">
-  <nav class="navbar j-navbar-menu">
-    <i class="iconfont iconmenu"></i>
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/05/three/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="赵文鹏">
+      <meta itemprop="description" content="我心无欲，锐不可当。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鹏的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/05/three/" class="post-title-link" itemprop="url">Review summary of English (3)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-05 23:43:22" itemprop="dateCreated datePublished" datetime="2020-11-05T23:43:22+08:00">2020-11-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-08 17:02:18" itemprop="dateModified" datetime="2020-11-08T17:02:18+08:00">2020-11-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、写作"><a href="#一、写作" class="headerlink" title="一、写作"></a>一、写作</h3><p><strong>写作的话题与《综合教程》3,6,7,8单元的主题相关。</strong></p>
+<p><strong>领导力</strong></p>
+<p><strong>Leadership</strong></p>
+<p>What is leadership? Its qualities are difficult to define. But they are not so difficult to identify. Leaders don ‘ t force other people to go along with them. They bring them along.</p>
+<p>Leaders get commitment from others by giving it themselves, by building an environment that encourages creativity, and by operating with honesty and fairness.</p>
+<p>They recognize that an organization’ s strategies for success require the combined talents and efforts of many people. Leadership is the catalyst for transforming those talents into results.</p>
+<p>Successful leaders are emotionally and intellectually oriented to the future–not wedded to the past. They have a hunger to take responsibility, to innovate, and to initiate. They are not content with merely taking care of what’ s already there. They want to move forward to create something new.</p>
+<p>Leaders provide answers as well as direction, offer strength as well as dedication, and speak from experience as well as understanding of the problems they face and the people they work with leaders are flexible rather than dogmatic. They believe in unity rather than yielding. And they strive to achieve agreements out of conflict. Leadership is all about getting people consistently to give their best, helping them to grow to their fullest potential, and motivating them to work toward a common good. Leaders make the right things happen when they’re supposed to a good leader, an effective leader, is one who has respect. Respect is something you have to have in order to get a leader who has respect for other people at all levels of an organization, for the work they do, and for their abilities, desires and needs, will find that respect is returned. And all concerned will be motivated to work together.</p>
+<p><strong>抑郁</strong></p>
+<p><strong>How to Deal with Depression</strong></p>
+<p>In recent years, with the increasingly fierce competition, more and more people are bearing great pressure from study, work and life. Under great pressure, many people begin to become sad, hopeless and finally suffer from depression.</p>
+<p>Depression has brought great bad influence on one’s study, work and life. In fact, depression affects not only one’s mind but also his body. Those with severe depression even are unable to continue their work or carry out normal activities. The symptoms mainly include feelings of sadness, hopelessness, not wanting food and trouble sleeping. Besides, depression is linked to many other diseases, like heart disease. What’s worse, depression is one of the main courses of people’s suicide.</p>
+<p>Considering the bad effects of depression, it must be taken more seriously. For those patients with depression, first of all, it is important to accept treatment timely instead of covering or ignoring the disease. Besides, people should learn to release pressure and keep a pleasant mood. Actuary, the best treatment is a combination of medication and psychological help. Only in this way can people reduce the chance of suffering from depression or get rid of it.</p>
+<p><strong>志愿</strong></p>
+<p>In recent years, the volunteering spirit has spread among the Chinese people, especially among youngsters. According to a survey, in 2008, there were about 1,700,000 volunteers who offered service for Olympic Games. Actually, an increasing number of people become volunteers every year in China.</p>
+<p>Volunteering actions are of tremendous benefits to both those in need and the society. Olympic Games are a good example. As is known to all, volunteers played an active role in Beijing Olympic Games. Without them, it would be a tough task to hold this un-precedent Olympic Games. Therefore, we can say that it was those volunteers who ensured the success of these games.</p>
+<p>As modern college students, we should get actively involved in volunteering activities. By participating, we can learn how to work well in a team, how to improve our interpersonal skills and organizational ability. Undoubtedly, all of these are critical for our person growth. So, we should take this chance to learn and to grow.</p>
+<p><strong>城市化</strong></p>
+<p>Presently, there is a tendency that a growing number of people are moving from countryside into city annually. A century ago, less than five percent of all people lived in cities. By the middle of this century it could be seventy percent, or almost six and a half billion people.</p>
+<p>Urbanization can lead to social and economic progress, but also put pressure on cities to provide housing and services. With the increasing number of individuals pouring into cities, the worsening inequalities, driven by social divisions and differences in wealth, could result in violence and crime unless cities plan better. Another issue is urban expansion. This is where cities expand quickly into rural areas, sometimes at a much faster rate than urban population growth.</p>
+<p>From my perspective, the government is expected to implement laws and regulations to limit the exceedingly growing of the urban population. As college students, we can seek employment back to our hometown and I am sure a promising future is awaiting us there.</p>
+<h3 id="二、听力"><a href="#二、听力" class="headerlink" title="二、听力"></a>二、听力</h3><p><strong>1. 新闻</strong></p>
+<p><strong>2. 长对话</strong></p>
+<p><strong>3. 短文：其中有两篇短文出自《大学英语4级考试听力理解》第三部分的专项训练。</strong></p>
+<h3 id="三、阅读"><a href="#三、阅读" class="headerlink" title="三、阅读"></a>三、阅读</h3><p><strong>1. 选词填空：从《综合教程》3,6,7,8单元的Text A选一段或几段话。</strong></p>
+<p><strong>2. 匹配题</strong></p>
+<p><strong>3. 仔细阅读</strong></p>
+<p>四、翻译</p>
+<p><strong>《综合教程》3,6,7,8单元的课后原题（第9题）。</strong></p>
+<p><strong>三、</strong></p>
+<p><strong>作为一名管理者,我曾在四家以激情和创造力著称的企业任职。我很少用一种自上而下的(top-down)方式为每一名员工安排工作。我更愿意将自己与员工放在一个平等的位置上,把自己视作激励者、协调人或沟通桥梁,而非传统意义上的领导者、督促者或命令中心。21世纪为经理人提出了更高更全面的要求。为了从一个传统的“管理者”转变为一名成功的“领导”,我们需要为所有员工营造一种充满激情和创新的环  境。从这个意义上说,领导力不是一种方法或技能,而是一种独特的艺术。作为一名管理者,我曾在四家以激情和创造力著称的企业任职。我很少用一种自上而下的(top-down)方式为每一名员工安排工作。我更愿意将自己与员工放在一个平等的位置上,把自己视作激励者、协调人或沟通桥梁,而非传统意义上的领导者、督促者或命令中心。21世纪为经理人提出了更高更全面的要求。为了从一个传统的“管理者”转变为一名成功的“领导”,我们需要为所有员工营造一种充满激情和创新的环  境。从这个意义上说,领导力不是一种方法或技能,而是一种独特的艺术。</strong></p>
+<p><strong>As a manager, I have worked in four companies known for their passion and creativity. I rarely use a top-down approach to arrange work for every employee. I prefer to place myself on an equal footing with my employees and see myself as an motivator, coordinator or bridge of communication, rather than a leader, supervisor or command center in the traditional sense. The 21st century puts forward higher and more comprehensive requirements for managers. In order to change from a traditional “manager” to a successful “leader”, we need to create a passionate and innovative environment for all employees. In this sense, leadership is not a method or skill, but a unique art.</strong></p>
+<p><strong>六、</strong></p>
+<p><strong>大学生处在人生发展的关键时期,他们富于理性与激情,富于创造力和挑战力。但是面对瞬息万变的社会、日趋激烈的竞争以及来自学习、就业、经济和情感等诸多方面的问题,他们往往不知所措( lose one ‘head),以至于有相当数量的在校学生存在不同程度的心理健康问题。心理健康是一项复杂的系统工程,学校教育应该与家庭、社会紧密结合(integrate. with),把心理健康教育作为一个重要的举措加以实施( implement),坚持以人为本的( people-oriented-)思想,以此来增进学生的心理健康,增强他们对社会的适应能力( adaptiveness)。</strong></p>
+<p><strong>College students are in the critical period of life development. They are full of rationality and passion, creativity and challenge. However, in the face of the rapidly changing society, the increasingly fierce competition and the problems from learning, employment, economy and emotion, they often lose one’ head, so that a considerable number of students in school have different degrees of mental health problems. Mental health is a complex systematic project. School education should be integrated with family and society. Mental health education should be implemented as an important measure and people-oriented thought should be adhered to in order to improve students’ mental health and enhance their adaptability to society.</strong></p>
+<p><strong>七、</strong></p>
+<p><strong>志愿者精神的本质( at the heart of)在于一个崇高的信念:只要我们一起努力, 这个世界就会变得更加美好。志愿者的动机可以概括(sum up)为一个词语:奉献 ( dedication),奉献他们的时间、精力,奉献他们的技术和才华。他们认为,人生成功的意义不在于从社会中得到什么,而在于拿什么回报社会。他们教孩子们读书识字, 成为年轻人的良师益友( mentor);他们帮助妇女从业,帮她们更好地适应社会;他们帮助维护和平、保护( preserve)环境。他们勇敢地相信,世界会由于他们的努力而有所改变( make difference)。</strong></p>
+<p><strong>The essence of volunteerism lies in a lofty belief: as long as we work together, the world will become a better place. The motivation of volunteers can be summed up in one word: dedication, dedication of their time and energy, dedication of their skills and talents. They believe that the significance of success in life is not what we get from the society, but what we can get back to the society. They teach their children to read and read and become good teachers and friends for young people; they help women to work and adapt to society better; they help maintain peace and protect the environment. They bravely believe that the world will change because of their efforts.</strong></p>
+<p><strong>八、</strong></p>
+<p><strong>在未来25年,中国将面临人类历史上最大规模和最快速的城市化进程,预计将会有超过3亿农村人口进入城市生活。城市化进程的加快 (acceleration) 和机动车的快速增长,已经给很多中国城市带来了严重的交通拥堵,空气污染,生活质量也有所下降。然而,新的城市发展方式展示了不一样的未来现代、健康、吸引人的、繁荣的城市,人们可以轻松快乐地行走、骑自行车、乘坐高质量且环保的公共交通和利用共享的车辆出行。这不仅是中国城市发展的典范,同时也会成为世界其他城市的典范。</strong></p>
+<p><strong>In the next 25 years, China will face the largest and fastest urbanization process in human history, and more than 300 million rural people are expected to enter urban life. The acceleration of urbanization and the rapid growth of motor vehicles have brought serious traffic congestion, air pollution and quality of life in many Chinese cities. However, the new mode of urban development shows a different future of modern, healthy, attractive and prosperous cities. People can easily and happily walk, ride bicycles, ride high-quality and environmental protection public transport and use shared vehicles to travel. This is not only a model for urban development in China, but also a model for other cities in the world.</strong>  </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/05/Packaging-Qt-Project/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="赵文鹏">
+      <meta itemprop="description" content="我心无欲，锐不可当。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鹏的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/05/Packaging-Qt-Project/" class="post-title-link" itemprop="url">Packaging Qt Project</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-11-05 15:35:47 / 修改时间：15:59:50" itemprop="dateCreated datePublished" datetime="2020-11-05T15:35:47+08:00">2020-11-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="怎样打包一个Qt项目呢？"><a href="#怎样打包一个Qt项目呢？" class="headerlink" title="怎样打包一个Qt项目呢？"></a>怎样打包一个Qt项目呢？</h4><h5 id="第一种方法："><a href="#第一种方法：" class="headerlink" title="第一种方法："></a>第一种方法：</h5><p>QT5自带的windeployqt</p>
+<p>首先要生成一下release版本。</p>
+<p><img src="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105154038843.png" alt="image-20201105154038843"></p>
+<p>这时就会找到相关文件夹。</p>
+<p><img src="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105154357821.png" alt="image-20201105154357821"></p>
+<p>打开这个文件夹，这时候点击exe文件是不能运行的（缺少运行所依赖的环境），将这个可执行文件复制出来，新建一个文件夹，粘贴进去。</p>
+<p>然后打开Qt的命令行，方法是在win菜单栏Qt下找到</p>
+<p><img src="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105155005020.png" alt="image-20201105155005020"></p>
+<p>点击运行。进入到含有EXE文件的路径。</p>
+<p><img src="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20201105155730394.png" alt="image-20201105155730394"></p>
+<p>接下来输入windeployqt 程序名 敲击回车</p>
+<p>然后就配置好啦！</p>
+<p>持续更新。。。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/04/post/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="赵文鹏">
+      <meta itemprop="description" content="我心无欲，锐不可当。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鹏的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/04/post/" class="post-title-link" itemprop="url">BinaryTree</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-04 17:48:33" itemprop="dateCreated datePublished" datetime="2020-11-04T17:48:33+08:00">2020-11-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-08 17:02:44" itemprop="dateModified" datetime="2020-11-08T17:02:44+08:00">2020-11-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="一、题目要求"><a href="#一、题目要求" class="headerlink" title="一、题目要求"></a>一、题目要求</h4><ul>
+<li>键盘输入二叉树结点序列（前序或层次），创建一棵二叉树</li>
+<li>实现<strong>SwapTree</strong>方法，以根结点为参数，交换每个结点的左子树和右子树（提示：前序递归）</li>
+<li>实现<strong>Find</strong>方法，查找值为<strong>key</strong>的结点，并输出该结点的所有祖先结点</li>
+<li><strong>输入一棵二叉树的前序遍历序列和中序遍历序列，重构这棵二叉树（这个序列里面是不带空结点’#‘的）</strong></li>
+</ul>
+<p>二叉树的前序和中序创建要求如下：</p>
+<ul>
+<li>要求键盘输入二叉树结点序列</li>
+<li>结点序列可以是前序，也可以是层次</li>
+<li>空结点以**#**表示</li>
+</ul>
+<h4 id="二、软件设计"><a href="#二、软件设计" class="headerlink" title="二、软件设计"></a>二、软件设计</h4><h5 id="二叉树节点："><a href="#二叉树节点：" class="headerlink" title="二叉树节点："></a>二叉树节点：</h5><p>数据、左孩子、右孩子、坐标、默认构造函数、有参构造函数、修改坐标值的函数</p>
+<h5 id="二叉树类："><a href="#二叉树类：" class="headerlink" title="二叉树类："></a>二叉树类：</h5><h6 id="基本函数："><a href="#基本函数：" class="headerlink" title="基本函数："></a>基本函数：</h6><p>默认构造函数、递归构造函数、析构函数、前中后层次遍历、树高、节点数量、清除函数、获得前中后层次遍历的字符串、点、线、获取根节点、存储关键值的父节点、判断树是否成功建成</p>
+<h6 id="题目要求的："><a href="#题目要求的：" class="headerlink" title="题目要求的："></a>题目要求的：</h6><p>前序中序构造函数、交换左右孩子的函数、寻找关键字并返回祖辈节点数据的函数</p>
+<h5 id="重点函数"><a href="#重点函数" class="headerlink" title="重点函数"></a>重点函数</h5><h6 id="前序构造二叉树"><a href="#前序构造二叉树" class="headerlink" title="前序构造二叉树"></a>前序构造二叉树</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//前序创造节点</span><br><span class="hljs-comment">//i代表第几个字母</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">BinaryTree::CreateBinTree</span><span class="hljs-params">(QString &amp;str, BinTreeNode *&amp;Node,<span class="hljs-keyword">int</span> &amp;i)</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-comment">//  qDebug()&lt;&lt;str;</span><br>    <span class="hljs-keyword">if</span>(str[i]!=<span class="hljs-string">&#x27;#&#x27;</span>)<span class="hljs-comment">//说明不是空节点</span><br>    &#123;<br>        Node=<span class="hljs-keyword">new</span> BinTreeNode(str[i]);<br>        Treesize++;<br>        i++;<br>        <span class="hljs-keyword">this</span>-&gt;CreateBinTree(str,Node-&gt;left,i);<br>        <span class="hljs-keyword">this</span>-&gt;CreateBinTree(str,Node-&gt;right,i);<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        i++;<br>        Node=<span class="hljs-literal">nullptr</span>;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h6 id="前序和中序构造"><a href="#前序和中序构造" class="headerlink" title="前序和中序构造"></a>前序和中序构造</h6><p>好吧，我承认这个递归挺难写的。思考了大半天。</p>
+<p>如何分析一个递归呢？递归代码的结构如下：</p>
+<p>类型 函数名（参数）</p>
+<p>{</p>
+<p> 跳出递归的条件</p>
+<p> 相关参数设置</p>
+<p> 开始递归调用函数</p>
+<p> 得到下一层递归的结果用于计算.. 这一部分看具体情况可有可无</p>
+<p>}</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//前序和中序建树</span><br><span class="hljs-comment">//pre代表前序字符串</span><br><span class="hljs-comment">//in代表中序字符串</span><br><span class="hljs-comment">//n代表pre可以到的位置</span><br><span class="hljs-function">BinTreeNode *<span class="hljs-title">BinaryTree::creatBinaryTree</span><span class="hljs-params">(QString pre, QString in, <span class="hljs-keyword">int</span> n)</span></span><br><span class="hljs-function"></span>&#123;<br>    qDebug()&lt;&lt;pre;<br>    qDebug()&lt;&lt;in;<br>    <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">nullptr</span>;<br>    <span class="hljs-keyword">int</span> k=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">while</span>(pre[<span class="hljs-number">0</span>]!=in[k]&amp;&amp;k&lt;in.length())k++;<br>    <span class="hljs-keyword">if</span>(k&gt;=in.length()) <span class="hljs-keyword">return</span> <span class="hljs-literal">nullptr</span>;  <br>    BinTreeNode *t=<span class="hljs-keyword">new</span> BinTreeNode(pre[<span class="hljs-number">0</span>]);<br>    <span class="hljs-comment">//mid函数裁剪字符串</span><br>    <span class="hljs-comment">//递归实现</span><br>    t-&gt;left=creatBinaryTree(pre.mid(<span class="hljs-number">1</span>),in,k);<br>    t-&gt;right=creatBinaryTree(pre.mid(k+<span class="hljs-number">1</span>),in.mid(k+<span class="hljs-number">1</span>),n-k<span class="hljs-number">-1</span>);<br>    <span class="hljs-keyword">return</span> t;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h6 id="交换节点函数"><a href="#交换节点函数" class="headerlink" title="交换节点函数"></a>交换节点函数</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//交换结点</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">BinaryTree::swapTree</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">//先把绘制好的线段和点擦除</span><br>    <span class="hljs-keyword">delete</span>[]  Mypoints;<br>    <span class="hljs-keyword">delete</span>[]  My_lines;<br>    <br>    preStr.clear();<br>    inStr.clear();<br>    postStr.clear();<br>    levelStr.clear();<br>    keyParent.clear();<br>    <span class="hljs-comment">//交换左右孩子</span><br>    <span class="hljs-keyword">this</span>-&gt;swapTree(root);<br>    <span class="hljs-comment">//重新设置点坐标</span><br>    <span class="hljs-keyword">this</span>-&gt;setMyPoints();<br><br>    <span class="hljs-keyword">this</span>-&gt;preOrder();<br>    <span class="hljs-keyword">this</span>-&gt;inOrder();<br>    <span class="hljs-keyword">this</span>-&gt;postOrder();<br>    <span class="hljs-keyword">this</span>-&gt;LevelOrder();<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h6 id="寻找关键字并返回祖辈节点数据的函数"><a href="#寻找关键字并返回祖辈节点数据的函数" class="headerlink" title="寻找关键字并返回祖辈节点数据的函数"></a>寻找关键字并返回祖辈节点数据的函数</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">//查找</span><br><span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">BinaryTree::Find</span><span class="hljs-params">(QChar ch, BinTreeNode *Node)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">//查找函数</span><br>    <span class="hljs-keyword">if</span>(Node==<span class="hljs-literal">nullptr</span>)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    <span class="hljs-comment">//如果第一个结点是所查找的，直接返回，无祖辈结点数据</span><br>    <span class="hljs-keyword">if</span>(Node-&gt;data==ch)<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    <span class="hljs-comment">//一言不合就递归</span><br>    <span class="hljs-keyword">if</span>(Find(ch,Node-&gt;left)||Find(ch,Node-&gt;right))<br>    &#123;<br>        <span class="hljs-comment">//将查找过程中的走过的祖辈结点存入</span><br>        keyParent.push_front(Node-&gt;data);<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>持续更新中…</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/26/My-New-Post/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="赵文鹏">
+      <meta itemprop="description" content="我心无欲，锐不可当。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鹏的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/26/My-New-Post/" class="post-title-link" itemprop="url">Huffman Compress</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-26 10:29:30" itemprop="dateCreated datePublished" datetime="2020-10-26T10:29:30+08:00">2020-10-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-05 09:23:57" itemprop="dateModified" datetime="2020-11-05T09:23:57+08:00">2020-11-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="一、题目要求"><a href="#一、题目要求" class="headerlink" title="一、题目要求"></a>一、题目要求</h3><p>首先对一个现有文件进行编码形成新的文件，也就是压缩。在文件使用时，再对压缩文件进行解码，也就是解压，复原原有文件。</p>
+<h4 id="基本要求："><a href="#基本要求：" class="headerlink" title="基本要求："></a>基本要求：</h4><p>1、压缩准备：读取指定被压缩文件，对文件进行分析，建立哈夫曼树。<br>2、压缩：利用已建好的哈夫曼树，对文件进行编码，并将哈夫曼编码及文件编码后的数据一起写入文件中，形成压缩文件(.Haf)。<br>3、解压：打开已有压缩文件(.Haf)，读取其中的哈夫曼编码，构建哈夫曼树，读取其中的数据，进行译码后，写入文件，完成解压缩。 </p>
+<h4 id="提高要求："><a href="#提高要求：" class="headerlink" title="提高要求："></a>提高要求：</h4><p>1、基于Windows对话框界面，可选择输入/输出文件名，有压缩进度条显示。<br>2、解压不必指定文件后缀，自动生成原始文件。<br>3、同类型的文件测试不同的数据集，比较其压缩比，采用最有效的压缩方式。<br>4、支持任意类型文件的压缩。</p>
+<h4 id="测试数据："><a href="#测试数据：" class="headerlink" title="测试数据："></a>测试数据：</h4><p>约40000字符左右。<br>示例数据.txt， 80K，采用WinRar压缩后为43K；本算法压缩后约为61K；<br>示例数据.doc，144K，采用WinRar压缩后为52K。</p>
+<h4 id="实现提示："><a href="#实现提示：" class="headerlink" title="实现提示："></a>实现提示：</h4><p>1、针对ASCII字符集[0,255]的频率统计<br>2、数据类型采用BYTE或unsigned char<br>3、文件一般读取两次：统计与编码<br>4、分块读取文件，建议为1K的整数倍<br>5、为了获得较好的压缩效率，频率的确定要以大量的统计数字为依据，或者压缩时再动态地统计各字符出现的频率<br>6、静态Huffman压缩，动态Huffman压缩 </p>
+<h4 id="压缩存储的实现"><a href="#压缩存储的实现" class="headerlink" title="压缩存储的实现"></a>压缩存储的实现</h4><p>从字符序列中逐个取出字符，转换为Huffman编码，以位为单位依次存储。<br>例如：a:0, b:10, c:110; d:1110; e:1111<br>ａｂａａｃａａｄａａａｅａａｂ<br>0100011000111000011110010<br>需要四个字节的空间，<br>使用unsigned short存储: 0xFFFF，16位<br>使用unsigned int存储: 0xFFFFFFFF，32位<br>使用位操作、移位操作  </p>
+<p>//一位操作，效率低下，应当使用多位操作，下列代码禁用</p>
+<p>Int Insertbit (int bit)<br>{<br>   hufcoded&lt;&lt;=1；<br>   if (bit) hufcoded |=1;<br>   if (++bitcounter==8)<br>   {<br>       bitcounter=0;<br>       fputc(hufcoded, file);<br>   }<br>}</p>
+<h4 id="解压过程："><a href="#解压过程：" class="headerlink" title="解压过程："></a>解压过程：</h4><p>把数据从Huffman编码还原到原来的字符编码，也要以位为单位，一位一位地进行。最先从根开始，根据面临的数据位是０还是１决定走左子树或右子树，走到叶结点就得到一个对应于该叶结点的字符；接着回到根结点，重复以上过程，叶到还原出所有的字符。</p>
+<p>因为最后一字节的有效位可能只占一部分，所以，解码的终止条件应该是”得到所有的字符”而不是把所有的位走完；否则，到达最后一字节的最后一位时，可能走不到叶结点，也可能已经产生了多余的字符。</p>
+<h4 id="测试执行时间的函数："><a href="#测试执行时间的函数：" class="headerlink" title="测试执行时间的函数："></a>测试执行时间的函数：</h4><p>#include &lt;mmsystem.h&gt;<br>#include &lt;stdlib.h&gt;<br>DWORD BegTime=timeGetTime();<br>….<br>EndTime=timeGetTime()-BegTime;</p>
+<h3 id="二、软件设计"><a href="#二、软件设计" class="headerlink" title="二、软件设计"></a>二、软件设计</h3> <script type="text/javascript" charset="utf-8"  src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.0.min.js"></script>
+ <script type="text/javascript" charset="utf-8"  src="https://files.cnblogs.com/files/liuzhou1/L2Dwidget.min.js"></script>
+
+ <script>
+        $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+        //2d模型
+        L2Dwidget.init({"display": {
+                "superSample": 2,
+                "width": 200,
+                "height": 400,
+                "position": "right",
+                "hOffset": 0,
+                "vOffset": 0
+            }
+        });
+     </script>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/20/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="赵文鹏">
+      <meta itemprop="description" content="我心无欲，锐不可当。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鹏的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/20/hello-world/" class="post-title-link" itemprop="url">Welcome!</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-20 11:20:20" itemprop="dateCreated datePublished" datetime="2020-10-20T11:20:20+08:00">2020-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-24 21:33:23" itemprop="dateModified" datetime="2020-10-24T21:33:23+08:00">2020-10-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="欢迎你的到来！"><a href="#欢迎你的到来！" class="headerlink" title="欢迎你的到来！"></a><div align = "center">欢迎你的到来！</div></h2><h2 id="记录一个IT男的成长路程，希望可以给你带来帮助与启示"><a href="#记录一个IT男的成长路程，希望可以给你带来帮助与启示" class="headerlink" title="记录一个IT男的成长路程，希望可以给你带来帮助与启示"></a>记录一个IT男的成长路程，希望可以给你带来帮助与启示</h2><h3 id="我的B站"><a href="#我的B站" class="headerlink" title="我的B站"></a><a target="_blank" rel="noopener" href="https://space.bilibili.com/484922358">我的B站</a></h3><p>收藏了一些B站上的好教程，我认为非常nice！</p>
+<h3 id="我的知乎"><a href="#我的知乎" class="headerlink" title="我的知乎"></a><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/fang-zhi-you-47-3">我的知乎</a></h3><p>我的知乎里也是收藏了一些好问题，好内容。至于本博客是如何搭建的，可以在我的知乎收藏中发现呐！</p>
+<h3 id="我的CSDN"><a href="#我的CSDN" class="headerlink" title="我的CSDN"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45965543">我的CSDN</a></h3><p>收藏一些优秀的技术博客！当然我也希望自己能够养成写博客的习惯。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="赵文鹏"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">赵文鹏</p>
+  <div class="site-description" itemprop="description">我心无欲，锐不可当。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
   </nav>
-  <div class="preview-image">
-    <h2 class="preview-motto" id="motto"></h2>
-    <!-- <span class="preview-cursor">|</span> -->
-    
-    <div class="preview-overlay">
-      <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="preview-parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(var(--color-background-rgb), 0.7" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(var(--color-background-rgb), 0.5)" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(var(--color-background-rgb), 0.3)" />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(var(--color-background-rgb))" />
-        </g>
-      </svg>
-    </div>
-    
-  </div>
-  <div class="preview-scroll">
-    <a href="#container" class="smooth-scroll"><i class="iconfont iconMouse"></i></a>
-  </div>
 </div>
-  
-  <div class="container" id="container">
-    <section class="row post">
-  
-  <div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2020/11/05/three/" class="post-image">
-      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <h3 class="post-title"><a href="/2020/11/05/three/">Review summary of English (3)</a></h3>
-      
-      
-      
-      <div class="post-excerpt">
-        <p class="substr-3">一、写作写作的话题与《综合教程》3,6,7,8单元的主题相关。
-领导力
-Leadership
-What is leadership? Its qualities are difficult to...</p>
+
+
+
       </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 05, 2020</span
-          class="post-info-item">
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
         
-        <span class="post-info-item"><i class="iconfont iconfont-size"></i>9241</span>
-      </div>
-    </div>
-  </div>
-</div>
-  
-  <div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2020/11/05/Packaging-Qt-Project/" class="post-image">
-      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <h3 class="post-title"><a href="/2020/11/05/Packaging-Qt-Project/">Packaging Qt Project</a></h3>
-      
-      
-      
-      <div class="post-excerpt">
-        <p class="substr-3">怎样打包一个Qt项目呢？第一种方法：QT5自带的windeployqt
-首先要生成一下release版本。
 
-这时就会找到相关文件夹。
-
-打开这个文件夹，这时候点击exe文件是不能运行的（缺少运...</p>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 05, 2020</span
-          class="post-info-item">
         
-        <span class="post-info-item"><i class="iconfont iconfont-size"></i>225</span>
-      </div>
-    </div>
-  </div>
-</div>
+
+<div class="copyright">
   
-  <div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2020/11/04/post/" class="post-image">
-      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <h3 class="post-title"><a href="/2020/11/04/post/">BinaryTree</a></h3>
-      
-      
-      
-      <div class="post-excerpt">
-        <p class="substr-3">一、题目要求
-键盘输入二叉树结点序列（前序或层次），创建一棵二叉树
-实现SwapTree方法，以根结点为参数，交换每个结点的左子树和右子树（提示：前序递归）
-实现Find方法，查找值为key的结...</p>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>十一月 04, 2020</span
-          class="post-info-item">
+  &copy; 2020-10 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">赵文鹏</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
         
-        <span class="post-info-item"><i class="iconfont iconfont-size"></i>2437</span>
+
+
+
+
+
+
+
+
       </div>
-    </div>
+    </footer>
   </div>
-</div>
-  
-  <div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2020/10/26/My-New-Post/" class="post-image">
-      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <h3 class="post-title"><a href="/2020/10/26/My-New-Post/">Huffman Compress</a></h3>
-      
-      
-      
-      <div class="post-excerpt">
-        <p class="substr-3">一、题目要求首先对一个现有文件进行编码形成新的文件，也就是压缩。在文件使用时，再对压缩文件进行解码，也就是解压，复原原有文件。
-基本要求：1、压缩准备：读取指定被压缩文件，对文件进行分析，建立哈...</p>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>十月 26, 2020</span
-          class="post-info-item">
-        
-        <span class="post-info-item"><i class="iconfont iconfont-size"></i>1694</span>
-      </div>
-    </div>
-  </div>
-</div>
-  
-  <div class="col-lg-4 col-md-6 col-sm-12 post-item">
-  <div class="post-wrap">
-    
-    <a href="/2020/10/20/hello-world/" class="post-image">
-      <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-    </a>
-    <div class="post-content">
-      <h3 class="post-title"><a href="/2020/10/20/hello-world/">Welcome!</a></h3>
-      
-      
-      
-      <div class="post-excerpt">
-        <p class="substr-3">欢迎你的到来！记录一个IT男的成长路程，希望可以给你带来帮助与启示我的B站收藏了一些B站上的好教程，我认为非常nice！
-我的知乎我的知乎里也是收藏了一些好问题，好内容。至于本博客是如何搭建的，...</p>
-      </div>
-      <div class="post-info">
-        <span class="post-info-item"><i class="iconfont iconcalendar"></i>十月 20, 2020</span
-          class="post-info-item">
-        
-        <span class="post-info-item"><i class="iconfont iconfont-size"></i>150</span>
-      </div>
-    </div>
-  </div>
-</div>
-  
-</section>
-    <section class="paginator">
-  
-</section>
-  </div>
-</main>
-  <footer class="footer">
-  <div class="footer-social">
-    
-    
-    
-    
-    
-    <a href="tencent://message/?Menu=yes&uin=1834586762 " target="_blank" onMouseOver="this.style.color= '#12B7F5'"
-      onMouseOut="this.style.color='#33333D'">
-      <i class="iconfont footer-social-item  iconQQ "></i>
-    </a>
-    
-    
-    
-    
-    
-    <a href="javascript:; " target="_blank" onMouseOver="this.style.color= '#09BB07'"
-      onMouseOut="this.style.color='#33333D'">
-      <i class="iconfont footer-social-item  iconwechat-fill "></i>
-    </a>
-    
-    
-    
-    
-    
-    <a href="https://www.instagram.com/izhaoo/ " target="_blank" onMouseOver="this.style.color= '#DA2E76'"
-      onMouseOut="this.style.color='#33333D'">
-      <i class="iconfont footer-social-item  iconinstagram "></i>
-    </a>
-    
-    
-    
-    
-    
-    <a href="https://github.com/zwp-peter " target="_blank" onMouseOver="this.style.color= '#24292E'"
-      onMouseOut="this.style.color='#33333D'">
-      <i class="iconfont footer-social-item  icongithub-fill "></i>
-    </a>
-    
-    
-    
-    
-    
-    <a href="mailto:1834586762@qq.com " target="_blank" onMouseOver="this.style.color='#FFBE5B'"
-      onMouseOut="this.style.color='#33333D'">
-      <i class="iconfont footer-social-item  iconmail"></i>
-    </a>
-    
-  </div>
-  <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
-</footer>
-<script type="text/javascript" src="/clicklove.js"></script>
 
   
-      <div class="fab fab-plus">
-    <i class="iconfont iconplus"></i>
-  </div>
-  
-  <div class="fab fab-daovoice">
-    <i class="iconfont iconcomment"></i>
-  </div>
-  
-  <div class="fab fab-up">
-    <i class="iconfont iconcaret-up"></i>
-  </div>
-  
-  
-    
-<script src="/js/color-mode.js"></script>
-
-  
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
-
-
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-
-
-
-
-
-
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
-
-
-
-
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
-<script src="/js/modules.js"></script>
-<script src="/js/zui.js"></script>
-<script src="/js/script.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i["DaoVoiceObject"] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    a.charset = "utf-8";
-    m.parentNode.insertBefore(a, m)
-  })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
-    "//widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
-  daovoice('init', {
-    app_id: "abcdefg"
-  }, {
-    launcher: {
-      disableLauncherIcon: true,
-    },
-  });
-  daovoice('update');
-</script>
+<script src="/js/next-boot.js"></script>
 
 
-
-<script>
-  (function () {
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    } else {
-      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-  })();
-</script>
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
 
 
-<script>
-  var _hmt = _hmt || [];
-  (function () {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?4c204d8bc027a0455b5fc642ac334ca8";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
+  
 
 
 
@@ -482,4 +750,14 @@ What is leadership? Its qualities are difficult to...</p>
 
 
 
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":300,"height":600},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
 </html>
