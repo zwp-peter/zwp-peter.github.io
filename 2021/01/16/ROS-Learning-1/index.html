@@ -7,14 +7,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>归档 - 小小鹏的博客: 2020</title>
+  <title>ROS Learning 1 - 小小鹏的博客</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
 
   
   
-  <meta name="description" content="我心无欲，锐不可当。"> 
+  <meta name="description" content="ROS Learning Journal 11、什么是..."> 
   
   <meta name="author" content="赵文鹏"> 
 
@@ -107,7 +107,7 @@
 
 <nav class="navbar">
   <div class="left"></div>
-  <div class="center">归档</div>
+  <div class="center">ROS Learning 1</div>
   <div class="right">
     
       <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
@@ -158,55 +158,95 @@
   </div>
 </nav>
   <main id="main">
-  <section class="archive">
-    <div class="archive-container">
-      <div class="archive-post">
-        <h3 class="archive-total">归档: 6 篇</h3>
-        
-        
-        
-        <h3 class="archive-year">2021 年</h3>
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2021/01/16/ROS-Learning-1/">一月 16</a>
-          <a class="archive-title" href="/2021/01/16/ROS-Learning-1/">ROS Learning 1</a>
-        </div>
-        
-        
-        <h3 class="archive-year">2020 年</h3>
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/11/05/three/">十一月 05</a>
-          <a class="archive-title" href="/2020/11/05/three/">Review summary of English (3)</a>
-        </div>
-        
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/11/05/Packaging-Qt-Project/">十一月 05</a>
-          <a class="archive-title" href="/2020/11/05/Packaging-Qt-Project/">Packaging Qt Project</a>
-        </div>
-        
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/11/04/post/">十一月 04</a>
-          <a class="archive-title" href="/2020/11/04/post/">BinaryTree</a>
-        </div>
-        
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/10/26/My-New-Post/">十月 26</a>
-          <a class="archive-title" href="/2020/10/26/My-New-Post/">Huffman Compress</a>
-        </div>
-        
-        
-        <div class="archive-item">
-          <a class="archive-date" href="/2020/10/20/hello-world/">十月 20</a>
-          <a class="archive-title" href="/2020/10/20/hello-world/">Welcome!</a>
-        </div>
-        
-      </div>
+  <div class="container" id="container">
+    <article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">ROS Learning 1</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>一月 16, 2021</span
+        class="post-info-item">
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>692</span>
     </div>
-  </section>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h2 id="ROS-Learning-Journal-1"><a href="#ROS-Learning-Journal-1" class="headerlink" title="ROS Learning Journal 1"></a>ROS Learning Journal 1</h2><h3 id="1、什么是ROS？"><a href="#1、什么是ROS？" class="headerlink" title="1、什么是ROS？"></a>1、什么是ROS？</h3><p>ROS ( Robot Operating System ) 机器人操作系统。</p>
+<p>ROS是用于编写机器人软件程序的一种具有高度灵活性的软件架构。</p>
+<p>ROS的原型源自斯坦福大学。</p>
+<p>它包含了大量工具软件、库代码和约定协议，旨在简化跨机器人平台创建复杂、鲁棒的机器人行为这一过程的难度与复杂度。</p>
+<h3 id="2、ROS总体设计的五个特点"><a href="#2、ROS总体设计的五个特点" class="headerlink" title="2、ROS总体设计的五个特点"></a>2、ROS总体设计的五个特点</h3><h4 id="①点对点的设计"><a href="#①点对点的设计" class="headerlink" title="①点对点的设计"></a>①点对点的设计</h4><p>节点单元</p>
+<p>分布式网络</p>
+<p>RPC+TCP/UDP通信系统（注：RPC 远程过程调用（Remote Procedure Call）。SAP系统RPC调用的原理其实很简单，有一些类似于三层构架的C/S系统，第三方的客户程序通过接口调用SAP内部的标准或自定义函数，获得函数返回的数据进行处理后显示或打印。）</p>
+<p>适合多机协同</p>
+<h4 id="②多语言支持"><a href="#②多语言支持" class="headerlink" title="②多语言支持"></a>②多语言支持</h4><p>支持Python、C++、Java等编程语言</p>
+<p>语言无关的接口定义</p>
+<h4 id="③架构精简、集成度高"><a href="#③架构精简、集成度高" class="headerlink" title="③架构精简、集成度高"></a>③架构精简、集成度高</h4><p>每个功能节点可以单独编译</p>
+<p>集成众多开源项目</p>
+<p>接口统一、提高软件的复用性</p>
+<h4 id="④组件化工具包丰富"><a href="#④组件化工具包丰富" class="headerlink" title="④组件化工具包丰富"></a>④组件化工具包丰富</h4><p>3D可视化工具——rviz</p>
+<p>物理仿真环境——gazebo</p>
+<p>数据记录工具——rosbag</p>
+<p>Qt工具箱——rqt_*</p>
+<h4 id="⑤免费且开源"><a href="#⑤免费且开源" class="headerlink" title="⑤免费且开源"></a>⑤免费且开源</h4><p>BSD许可，可修改、可服用、可商用</p>
+<p>软件包数量指数级增加，良好的生态系统</p>
+<h3 id="ROS系统的实现"><a href="#ROS系统的实现" class="headerlink" title="ROS系统的实现"></a>ROS系统的实现</h3><h4 id="计算图"><a href="#计算图" class="headerlink" title="计算图"></a>计算图</h4><p>节点（Node）——软件模块</p>
+<p>节点管理器（ROS Master）——控制中心，提供参数管理</p>
+<p>话题（Topic）——异步通信机制，传输消息（Message）</p>
+<p>服务（Service）——同步通信机制，传输请求/应答数据</p>
+<h4 id="话题通信机制"><a href="#话题通信机制" class="headerlink" title="话题通信机制"></a>话题通信机制</h4><h4 id="服务通信"><a href="#服务通信" class="headerlink" title="服务通信"></a>服务通信</h4><p><img   class="lazyload" data-original="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20210116213203983.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20210116213203983"></p>
+<h4 id="参数通信机制"><a href="#参数通信机制" class="headerlink" title="参数通信机制"></a>参数通信机制</h4><h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p><img   class="lazyload" data-original="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20210116213259862.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20210116213259862"></p>
+<h3 id="开源社区"><a href="#开源社区" class="headerlink" title="开源社区"></a>开源社区</h3><p><img   class="lazyload" data-original="C:\Users\Dell\AppData\Roaming\Typora\typora-user-images\image-20210116213335770.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20210116213335770"></p>
+
+      </section>
+      <section class="extra">
+        
+        <ul class="copyright">
+  
+  <li><strong>本文作者：</strong>赵文鹏</li>
+  <li><strong>本文链接：</strong><a href="http://example.com/2021/01/16/ROS-Learning-1/index.html">http://example.com/2021/01/16/ROS-Learning-1/index.html</a></li>
+  <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+      rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        <section class="donate">
+  <div class="qrcode">
+    <img   class="lazyload" data-original="https://i.loli.net/2020/10/30/JOHkCsxcdtAMXeY.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+<nav class="nav">
+  
+  
+    <a href="/2020/11/05/three/">Review summary of English (3)<i class="iconfont iconright"></i></a>
+  
+</nav>
+
+      </section>
+      
+      <section class="comments">
+  
+  <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+</section>
+      
+    </section>
+  </div>
+</article>
+  </div>
 </main>
   <footer class="footer">
   <div class="footer-social">
